@@ -99,3 +99,105 @@ footer {
   padding: 15px;
   text-align: center;
 }
+
+/* Bandera horizontal fija */
+.bandera-horizontal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050; /* por encima de otros elementos */
+}
+.franja {
+  width: 100%;
+  height: 20px; /* altura ajustable */
+}
+.franja.azul {
+  background-color: #1976D2;
+}
+.franja.rojo {
+  background-color: #D32F2F;
+}
+
+/* Ajustar contenido para no quedar debajo de la bandera */
+body {
+  padding-top: 40px; /* espacio para la bandera fija */
+}
+
+/* Hoja organizada */
+.hoja {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Formularios estilo hoja */
+form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+form .form-label {
+  font-weight: bold;
+  color: #1976D2;
+}
+form .form-control {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+form .btn {
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 6px;
+}
+form .btn-danger {
+  background-color: #D32F2F;
+}
+form .btn-danger:hover {
+  background-color: #1976D2;
+}
+
+
+/* Carrusel del local */
+#carouselLocal img {
+  max-height: 400px;
+  object-fit: cover;
+  border: 3px solid #1976D2;
+  border-radius: 8px;
+}
+
+/* Imagen del local */
+.imagen-local img {
+  border: 3px solid #1976D2;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #D32F2F; /* rojo corporativo */
+}
+footer a:hover {
+  color: #1976D2; /* azul corporativo */
+}
+
+.bandera-horizontal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+}
+.franja {
+  width: 100%;
+  height: 20px;
+}
+.franja.azul { background-color: #1976D2; }
+.franja.rojo { background-color: #D32F2F; }
+
+/* Ajustar contenido para no quedar debajo de la bandera */
+body {
+  padding-top: 40px;
+}
