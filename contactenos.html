@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contáctenos - PartKorea Mundo Korea</title>
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Contáctenos</h1>
+  <?php 
+    session_start(); 
+    if (empty($_SESSION['csrf_token'])) { 
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32)); 
+        }
+  ?>  
+  <form action="php/send_contact.php" method="POST">
+    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+    <label>Email:</label><input type="email" name="email" required><br>
+    <label>Asunto:</label><input type="text" name="subject" required><br>
+    <label>Mensaje:</label><textarea name="message" required></textarea><br>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
